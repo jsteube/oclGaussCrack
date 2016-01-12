@@ -1,0 +1,35 @@
+v1.3 -> v1.4
+
+o Move the project to GitHub
+o Update Makefile to use official Khronos OpenCL Headers
+o Update Makefile to fix an issue related to _mkgmtime32
+
+v1.2 -> v1.3
+
+o Added two support utilities: gaussFilter and gaussCombinator, see README for details
+o Added check for \r\n LFs not just \n
+o Implemented Trac #47: Full verification of all 4 known hashes
+o Implemented Trac #48: Saving the cracked hashes to a "pot" file
+o Fixed buf: In utf16 unicode there is a zero-byte following the \n, skip it
+
+v1.1 -> v1.2
+
+o Added two optional parameters to pick a range of candidates to test - useful in distributed / resume.
+o Reduced required host memory
+o Cleaned code to make it more readable
+o Changed maximum line length from BUFSIZ to configurable MAX_LINELEN
+o Changed GPU kernel to more precise checks
+o Changed GPU runtime in status display
+o Fixed bug: Add extra buffer space for salt and padding
+o Fixed bug: VECT_SIZE was handled incorrectly
+o Fixed bug: kernel source terminator byte was set incorrectly
+o Fixed bug: cracked display showed more data than neccessary
+
+v1.0 -> v1.1
+
+o Added windows precompiled binaries
+o Added dedicated 32/64 bit precompiled binaries
+o Added real Gauss-Virus hash to kernel
+o Test vector hash is just commented out, simply uncomment it for test
+o Removed OpenSSL depency
+o Fixed documentation
