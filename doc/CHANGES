@@ -3,6 +3,8 @@ v1.3 -> v1.4
 o Move the project to GitHub
 o Update Makefile to use official Khronos OpenCL Headers
 o Update Makefile to fix an issue related to _mkgmtime32
+o Fix a bug where global_work_size[0] results in a wrong value
+o Allow the use of deprecated OpenCL API function calls
 
 v1.2 -> v1.3
 

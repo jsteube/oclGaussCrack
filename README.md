@@ -4,7 +4,7 @@ oclGaussCrack
 Crack the verification hash of the encrypted payload of the Gauss Virus
 
 * Name....: oclGaussCrack
-* Version.: v1.3
+* Version.: v1.4
 * Autor...: Jens Steube <jens.steube@gmail.com>
 * License.: GPLv2
 * Language: C, OpenCL
@@ -151,4 +151,4 @@ Example usage:
 
 USE AT YOUR OWN RISK. This software is provided 'AS IS' without any express or implied warranty of any kind.
 
-Copyright (c) 2012-2016, Jens Steube
+Copyright (c) 2012-2017, Jens Steube

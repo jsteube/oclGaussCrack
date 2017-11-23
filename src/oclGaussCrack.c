@@ -19,6 +19,9 @@
  *
  */
 
+#define CL_USE_DEPRECATED_OPENCL_1_2_APIS
+#define CL_USE_DEPRECATED_OPENCL_2_0_APIS
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -144,7 +147,7 @@ static void launch_kernel (const cl_uint num_devices, gpu_ctx_t *gpu_ctxs)
     size_t global_work_size[3] = { gpu_ctx->num_work,    1, 1 };
     size_t local_work_size[3]  = { gpu_ctx->num_threads, 1, 1 };
 
-    global_work_size[0] = (global_work_size[0] + (local_work_size[0] - 1)) & ~(local_work_size[0] - 1);
+    while (global_work_size[0] % local_work_size[0]) global_work_size[0]++;
 
     gc_clEnqueueNDRangeKernel (gpu_ctx->command_queue, gpu_ctx->kernel, 1, NULL, global_work_size, local_work_size, 0, NULL, NULL);
 
