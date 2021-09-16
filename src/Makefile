@@ -51,10 +51,10 @@ libOpenCL64.a:
 	${DLL_WIN_64} -A -k -l libOpenCL64.a -d lib/OpenCL64.def
 
 oclGaussCrack32.bin: src/oclGaussCrack.c
-	$(CPP_LINUX_32) $(CFLAGS) $(CFLAGS_32) $(CFLAGS_LINUX) -o $@ $^ $(LFLAGS_LINUX) -lOpenCL -L $(OCL)/lib/x86
+	$(CPP_LINUX_32) $(CFLAGS) $(CFLAGS_32) $(CFLAGS_LINUX) -o $@ $^ $(LFLAGS_LINUX) -lOpenCL
 
 oclGaussCrack64.bin: src/oclGaussCrack.c
-	$(CPP_LINUX_64) $(CFLAGS) $(CFLAGS_64) $(CFLAGS_LINUX) -o $@ $^ $(LFLAGS_LINUX) -lOpenCL -L $(OCL)/lib/x86_64
+	$(CPP_LINUX_64) $(CFLAGS) $(CFLAGS_64) $(CFLAGS_LINUX) -o $@ $^ $(LFLAGS_LINUX) -lOpenCL
 
 oclGaussCrack32.exe: src/oclGaussCrack.c
 	$(CPP_WIN_32)   $(CFLAGS) $(CFLAGS_32) $(CFLAGS_WIN)   -o $@ $^ $(LFLAGS_WIN)   -lOpenCL

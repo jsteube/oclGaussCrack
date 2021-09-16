@@ -1,3 +1,8 @@
+v1.4 -> v1.x
+
+o Update Makefile to simplify compilation process
+o Set OpenCL version to use before loading OpenCL headers
+
 v1.3 -> v1.4
 
 o Move the project to GitHub
